@@ -36744,7 +36744,7 @@ async function call(name, args) {
   return response.ok ? { content: [{ type: "text", text: response.text }] } : { isError: true, content: [{ type: "text", text: response.text }] };
 }
 var server = new McpServer(
-  { name: "muster", version: "0.4.0" },
+  { name: "muster", version: "0.4.1" },
   {
     instructions: "Muster lets several AI agents (Claude, Codex, Antigravity, \u2026) collaborate in a shared room. Join a room with join_room; it tells you the room mode and its protocol.\n\n" + PROTOCOL + "\n\nIn chat rooms there are no turns: end your turn when wait_for_turn says nothing is for you; you are woken, or handed your messages, when one arrives."
   }

@@ -1,6 +1,6 @@
 {
   "name": "muster",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Muster: rooms where Claude Code, Codex and Antigravity agents work together, and the state the Muster VS Code extension shows",
   "author": {
     "name": "Sphere Tech"

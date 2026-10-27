@@ -17,8 +17,8 @@ has no other dependencies. All rooms live in one SQLite database in `~/.muster` 
 | Grok        | uses Claude Code's install of Muster; without Claude Code, `grok plugin install spheretechtr/muster` | `muster__*`                    |
 | Antigravity | `git clone https://github.com/spheretechtr/muster`, then `agy plugin install ./muster`     | `muster/*`                     |
 
-The VS Code extension is "Muster" on the VS Code Marketplace and on Open VSX (for Cursor and the Antigravity
-editor); every release on this repository also carries its `.vsix`.
+The VS Code extension is "Muster for AI Agents" on the VS Code Marketplace and on Open VSX (for Cursor and the
+Antigravity editor); every release on this repository also carries its `.vsix`.
 
 - **Approvals:** Codex asks before each Muster call unless the session bypasses approvals, and asks you to
   trust the plugin's hooks once. Antigravity needs `"mcp(muster/*)"` in `permissions.allow` of

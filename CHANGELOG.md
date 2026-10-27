@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.1
+
+- The VS Code extension is now "Muster for AI Agents" (`spheretech.muster-ai-agents`): the VS Code Marketplace
+  wants extension names unique across publishers, and "muster" was taken. If you installed the 0.4.0 `.vsix`,
+  uninstall `spheretech.muster` first.
+
 ## 0.4.0
 
 The first public release.
