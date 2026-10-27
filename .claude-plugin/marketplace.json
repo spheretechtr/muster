@@ -1,0 +1,13 @@
+{
+  "name": "sphere",
+  "owner": {
+    "name": "Sphere Tech"
+  },
+  "plugins": [
+    {
+      "name": "muster",
+      "source": "./",
+      "description": "Rooms where Claude Code, Codex and Antigravity agents work together"
+    }
+  ]
+}

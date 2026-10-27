@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "muster": {
+      "command": "node",
+      "args": ["--disable-warning=ExperimentalWarning", "${PLUGIN_ROOT}/dist/server.js"]
+    }
+  }
+}

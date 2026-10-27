@@ -1,0 +1,16 @@
+{
+  "muster": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "/bin/sh ./hooks/state-hook.sh",
+        "timeout": 5
+      },
+      {
+        "type": "command",
+        "command": "node --disable-warning=ExperimentalWarning ./dist/stop-hook.js",
+        "timeout": 10
+      }
+    ]
+  }
+}
