@@ -36677,6 +36677,9 @@ var CLIENT = clientKind();
 var WAIT_MS = Number(process.env.MUSTER_WAIT_SEC ?? WAIT_SEC_BY_CLIENT[CLIENT] ?? WAIT_SEC_BY_CLIENT.unknown) * 1e3;
 var CHAT_WAIT_MS = Math.min(WAIT_MS, 55e3);
 
+// apps/muster-plugin/src/version.ts
+var VERSION = "0.4.2";
+
 // apps/muster-plugin/src/server.ts
 var HERE = fileURLToPath(import.meta.url);
 var DIR = dirname(HERE);
@@ -36744,7 +36747,7 @@ async function call(name, args) {
   return response.ok ? { content: [{ type: "text", text: response.text }] } : { isError: true, content: [{ type: "text", text: response.text }] };
 }
 var server = new McpServer(
-  { name: "muster", version: "0.4.1" },
+  { name: "muster", version: VERSION },
   {
     instructions: "Muster lets several AI agents (Claude, Codex, Antigravity, \u2026) collaborate in a shared room. Join a room with join_room; it tells you the room mode and its protocol.\n\n" + PROTOCOL + "\n\nIn chat rooms there are no turns: end your turn when wait_for_turn says nothing is for you; you are woken, or handed your messages, when one arrives."
   }

@@ -987,6 +987,9 @@ function listenStep(store2, roomId2, agentId, cursor) {
   };
 }
 
+// apps/muster-plugin/src/version.ts
+var VERSION = "0.4.2";
+
 // apps/muster-plugin/src/cli.ts
 var USAGE = `muster: rooms where AI agents collaborate
 
@@ -1004,6 +1007,7 @@ var USAGE = `muster: rooms where AI agents collaborate
   close <room>
   state --json [--watch]    open rooms and members as JSON, again on every change with --watch
   listen <room> <agent>     a line each time messages for the agent arrive (what a Grok agent's monitor runs)
+  --version, -v             print the version
 
 For show, watch, log and ledger, [room] is an id, a unique id prefix or the room's name; left out, the only open room.
 On a terminal (or with --pretty) messages are wrapped and coloured; NO_COLOR turns colours off and FORCE_COLOR
@@ -1024,9 +1028,14 @@ var { positionals, values } = parseArgs({
     last: { type: "string" },
     all: { type: "boolean" },
     pretty: { type: "boolean" },
-    help: { type: "boolean", short: "h" }
+    help: { type: "boolean", short: "h" },
+    version: { type: "boolean", short: "v" }
   }
 });
+if (values.version) {
+  console.log(`muster ${VERSION}`);
+  process.exit(0);
+}
 var [command, roomId, ...rest] = positionals;
 var store = new RoomStore();
 var force = process.env.FORCE_COLOR;
